@@ -1,0 +1,26 @@
+
+<div class="container">
+    <h2>Lista Animali</h2>
+    <div class="alinea ">
+    <div class="card col-sm-2 " *ngFor="let animale of animali">
+    <img class="card-img-top" src="https://tse3.mm.bing.net/th?id=OIP.ijBj4Q6RTgABKnP-NQj4KAHaHR&pid=Api&P=0&h=180" style="width:12rem;">
+    <div class="card-body">
+        <h1 class="card-title">Cane</h1>
+        <p> {{ animale.nome }} - {{ animale.razza }} - {{ animale.eta }} anni</p>
+    </div>
+    <button class="btn btn-success" (click)="selezionaAnimale(animale)">Modifica</button>
+    <button class="btn btn-danger" (click)="deleteAnimale(animale.id)">Elimina</button>
+    </div>
+    </div>
+</div>
+
+
+<div *ngIf="animaleSelezionato" class="modifica col.md-3 bg-primary">
+    <h3>Modifica Animale</h3>
+    <input [(ngModel)]="animaleSelezionato.nome" placeholder="Nome">
+    <input [(ngModel)]="animaleSelezionato.razza" placeholder="Razza">
+    <input [(ngModel)]="animaleSelezionato.eta" type="number" placeholder="Età">
+    <button (click)="updateAnimali()" class="btn btn-secondary" >Salva</button>
+    <button class="btn btn-danger" (click)="animaleSelezionato = null">Annulla</button>
+</div>
+

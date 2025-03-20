@@ -1,0 +1,15 @@
+.fromClass{
+    display: grid;
+    justify-content: space-between;
+    align-items: center;
+    text-align: start;
+   
+}
+.register{
+    background-color: rgb(133, 132, 131);
+    font-size: xx-large;
+    width:30%;
+    position:relative;
+    left: 30%;
+    
+}

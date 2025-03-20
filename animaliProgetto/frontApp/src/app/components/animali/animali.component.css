@@ -1,0 +1,18 @@
+.modifica{
+    display: flex;
+    flex-direction: row;
+    font-size: 30px;
+    text-align: center;
+}
+.alinea{
+    display: flex;
+  flex-direction: row;
+  font-size: 30px;
+  text-align: center;
+
+}
+
+.container{
+   
+    background-color: rgb(198, 171, 223);
+}

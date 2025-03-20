@@ -1,0 +1,23 @@
+
+<div class="register">
+    <h2>Registrazione Animale</h2>
+<form (ngSubmit)="registraAnimale()">
+    <div class="formClass">
+    <div  class="formGroup">
+        <label for="nome">Nome:</label>
+        <input id="nome" [(ngModel)]="animale.nome" name="nome" required>
+    </div>
+    <div [ngIf]="isInput" class="formGroup">
+        <label for="razza">Razza:</label>
+        <input id="razza" [(ngModel)]="animale.razza" name="razza" required>
+    </div>
+    <div class="formGroup">
+        <label for="eta">Età:</label>
+        <input id="eta" type="number" [(ngModel)]="animale.eta" name="eta" required>
+    </div>  
+    <div class="formGroup">
+         <button type="submit">Registra</button>
+    </div>
+    </div>
+</form>
+</div>
